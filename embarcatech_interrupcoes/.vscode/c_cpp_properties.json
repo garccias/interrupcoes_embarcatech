@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Pico",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/libs",  // Adicionado: Inclui o diretório 'libs/'
+                "${userHome}/.pico-sdk/sdk/2.1.0/**"
+            ],
+            "forcedInclude": [
+                "${userHome}/.pico-sdk/sdk/2.1.0/src/common/pico_base_headers/include/pico.h",
+                "${workspaceFolder}/build/generated/pico_base/pico/config_autogen.h",
+                "${workspaceFolder}/libs/debounce.h",      // Adicionado: Força inclusão de debounce.h
+                "${workspaceFolder}/libs/gpio_config.h",  // Adicionado: Força inclusão de gpio_config.h
+                "${workspaceFolder}/libs/ws2812.h"        // Adicionado: Força inclusão de ws2812.h
+            ],
+            "defines": [],
+            "compilerPath": "${userHome}/.pico-sdk/toolchain/13_3_Rel1/bin/arm-none-eabi-gcc.exe",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-gcc-arm"
+        }
+    ],
+    "version": 4
+}
